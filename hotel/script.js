@@ -4,6 +4,8 @@ var hotelszoveg2 = "<h2>Hotel 2</h2>Vel risus commodo viverra maecenas accumsan.
 
 var hotelszoveg3 = "<h2>Hotel 3</h2>Cras ornare arcu dui vivamus arcu. Nisi porta lorem mollis aliquam ut porttitor. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. A lacus vestibulum sed arcu non odio. Pellentesque habitant morbi tristique senectus et netus et malesuada. Fermentum et sollicitudin ac orci phasellus egestas. Morbi blandit cursus risus at ultrices mi. Commodo sed egestas egestas fringilla. At tempor commodo ullamcorper a lacus vestibulum sed arcu. Vitae et leo duis ut. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada.";
 
+let ar = 0;
+
 function foglal(szam) {
     let szovegdoboz = document.getElementById('bal');
     let hotelar = document.getElementById('hotelar');
@@ -24,7 +26,6 @@ function foglal(szam) {
 
 function szamol() {
     let hotel = document.getElementById('hotel');
-    let ar = 0;
     if (hotel.value == 1) {
         ar = 200000;
     }
@@ -43,4 +44,35 @@ function szamol() {
 
     document.getElementById('arfoejszaka').innerHTML = arfoejszaka;
     document.getElementById('arfo').innerHTML = arfo;
+
+    if (arfoejszaka == arfo) {
+        document.getElementById('arfoejszakap').style.visibility = 'hidden';
+    }
+    else {
+        document.getElementById('arfoejszakap').style.visibility = 'visible';
+    }
+}
+
+function valtas() {
+    let szovegdoboz = document.getElementById('bal');
+    let hotel = document.getElementById('hotel');
+    let hotelar = document.getElementById('hotelar');
+    if (hotel.value == 1) {
+        szovegdoboz.innerHTML = hotelszoveg1;
+        hotelar.innerHTML = 200000;
+    }
+    else if (hotel.value == 2) {
+        szovegdoboz.innerHTML = hotelszoveg2;
+        hotelar.innerHTML = 180000;
+    }
+    else {
+        szovegdoboz.innerHTML = hotelszoveg3;
+        hotelar.innerHTML = 240000;
+    }
+}
+
+function torles() {
+    document.getElementById('nev').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('uzenet').value = "";
 }

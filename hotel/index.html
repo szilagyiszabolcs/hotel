@@ -15,7 +15,7 @@
 <body>
     <div id="valami">
         <div class="container">
-            <h1>Hotelfoglalás</h1>
+            <h1 id="cim">Hotelfoglalás</h1>
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="item active">
@@ -68,19 +68,39 @@
             <div id="jobb">
                 <p>
                     Kiválasztott hotel: 
-                    <select id="hotel">
+                    <select id="hotel" onchange="valtas()">
                         <option value='1'>Hotel 1</option>
                         <option value='2'>Hotel 2</option>
                         <option value='3'>Hotel 3</option>
                     </select>
                 </p>
-                <p>Hotel ára: <span id="hotelar"></span> Ft</p>
-                <p>Éjszakák száma: <input type="number" min="1" id="ejszaka"></p>
-                <p>Személyek száma: <input type="number" min="1" id="szemely"></p>
-                <p>ár/fő/éjszaka: <span id="arfoejszaka">0</span> Ft</p>
+                <p>Hotel ára: <span id="hotelar">200000</span> Ft (1 fő 1 éjszaka)</p>
+                <p>Éjszakák száma: <input type="number" min="1" id="ejszaka" value="1" onchange="szamol()"></p>
+                <p>Személyek száma: <input type="number" min="1" id="szemely" value="1" onchange="szamol()"></p>
                 <p>ár/fő: <span id="arfo">0</span> Ft</p>
-                <p><input type="button" value="Lefoglalom" onclick="szamol()"></p>
+                <p id='arfoejszakap'>ár/fő/éjszaka: <span id="arfoejszaka">0</span> Ft</p>
+                <p><input type="button" value="Lefoglalom"></p>
             </div>
+        </div>
+
+        <div class="container" id="container2">
+            <h1>Megjegyzése van?</h1>
+            <div id="bal2">
+                <p>Név: <input type="text" name="nev" id="nev">
+                <span id="emailaddress">Email: <input type="email" name="email" id="email"></span></p>
+            </div>
+
+            <div id="jobb2">
+                <textarea id="uzenet"></textarea>
+            </div>
+
+            <input type="button" value="Küldés" onclick="torles()">
+        </div>
+
+        <div class="container" id="container3">
+            <p>
+                Copyright &#169; 2020 - 2020 | Minden jog fenntartva
+            </p>
         </div>
     </div>
 </body>
