@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.carousel-caption h3, .carousel-caption p {
+    font-family: 'Aguafina Script';
+    font-size: 22px;
+}
+.container h1 {
+    font-family: 'Aguafina Script';
+    text-align: center;
+    color: #f0f0f0;
+    font-size: 36px;
+    letter-spacing: 20px;
+    font-variant: small-caps;
+}
+.carousel-caption input[type='button'] {
+    background-color: #f0f0f0;
+    color: black;
+    border: 0px;
+}
+#valami {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+#myCarousel {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px 1px black;
+}
+.container-fluid {
+    background-color: #525252;
+}
+#container {
+    background-color: #edecda;
+    width: 60%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+#bal, #jobb {
+    float: left;
+    width: 35%;
+}
+#bal {
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: justify;
+}
+#jobb {
+    margin-right: 10%;
+}
+h2 {
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 15px;
+    font-variant: small-caps;
+}
+#jobb input {
+    width: 30%;
+}
